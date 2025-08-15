@@ -1,130 +1,216 @@
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Code, Cloud, Brain, Rocket } from "lucide-react";
+import { Code2, Database, Smartphone, Brain, Server, GitBranch, Award, Trophy, BookOpen, Medal } from "lucide-react";
 
 const About = () => {
-  const highlights = [
+  const skills = {
+    "Programming Languages": ["Java", "Python", "C/C++", "JavaScript", "TypeScript", "SQL", "Shell Script"],
+    "Frameworks & Libraries": ["React", "Node.js", "Express", "Flask", "TensorFlow", "OpenCV"],
+    "Databases": ["MongoDB", "MySQL", "PostgreSQL", "Firebase"],
+    "Tools & Technologies": ["Git", "Docker", "Kubernetes", "AWS", "Vercel", "Android Studio", "Linux"],
+    "Mobile Development": ["Android Development", "AOSP", "Mobile App Design"],
+    "AI & Machine Learning": ["NLP", "Computer Vision", "Machine Learning", "AI Chatbots"]
+  };
+
+  const experience = [
     {
-      icon: <Code className="h-8 w-8 text-primary" />,
-      title: "Android Development",
-      description: "Expert in Kotlin, Java, and Android SDK with experience in AOSP and embedded systems"
+      title: "Android Developer",
+      company: "PenguinOS Project",
+      period: "Nov 2023 - Present",
+      description: "Leading development of custom Android-based operating system with enhanced file management and system optimization."
     },
     {
-      icon: <Cloud className="h-8 w-8 text-accent" />,
-      title: "Cloud Infrastructure",
-      description: "Specialized in AWS, Google Cloud, Docker, Kubernetes, and CI/CD pipeline automation"
+      title: "Full-Stack Developer",
+      company: "Freelance",
+      period: "Mar 2025 - May 2025", 
+      description: "Developed complete MERN stack food ordering application with payment integration and admin dashboard."
     },
     {
-      icon: <Brain className="h-8 w-8 text-secondary" />,
-      title: "AI & Machine Learning",
-      description: "Building intelligent healthcare chatbots and AI-driven applications with NLP and ML"
-    },
-    {
-      icon: <Rocket className="h-8 w-8 text-primary" />,
-      title: "Full Stack Development",
-      description: "MERN stack applications with secure FTP systems and real-time computing solutions"
+      title: "Research Contributor",
+      company: "IEEE",
+      period: "Dec 2023 - Dec 2024",
+      description: "Published research on AI-driven healthcare chatbots, advancing intelligent diagnostic systems."
     }
   ];
 
-  const technologies = [
-    "Python", "C++", "Java", "Kotlin", "JavaScript", "SQL", "HTML", "CSS", 
-    "React", "Node.js", "MySQL", "SQLite", "TensorFlow", "Scikit-learn", "OpenCV", 
-    "YOLOv5", "Pandas", "NumPy", "AWS", "Google Cloud", "Firebase", "Git", 
-    "Docker", "Kubernetes", "CI/CD", "Android Studio", "Flutter", "Linux", 
-    "Arduino", "Raspberry Pi", "MATLAB", "SciPy", "SymPy"
+  const honorsAndAwards = [
+    {
+      title: "IEEE SCOPES 2024 Research Publication",
+      organization: "IEEE",
+      date: "Dec 2024",
+      description: "Published research paper on 'Integrating Intelligent Chatbots in Healthcare: AI Based Healthcare Chatbot'"
+    },
+    {
+      title: "Microcontroller-Based Project Expo Finalist",
+      organization: "Technical Institution",
+      date: "Nov 2024",
+      description: "Advanced to final round for Implementation of Sixth Sense Using Raspberry Pi project"
+    },
+    {
+      title: "Academic Excellence",
+      organization: "University",
+      date: "Ongoing",
+      description: "Consistent high performance in Computer Science and Engineering coursework"
+    }
+  ];
+
+  const researchPublications = [
+    {
+      title: "Integrating Intelligent Chatbots in Healthcare: AI Based Healthcare Chatbot",
+      conference: "IEEE SCOPES 2024 Conference Proceedings",
+      date: "Dec 2024",
+      description: "Research on AI-driven healthcare chatbots for symptom-based diagnosis using NLP and machine learning",
+      link: "https://ieeexplore.ieee.org/author/273156730417953"
+    }
   ];
 
   return (
     <section id="about" className="py-20 px-6">
-      <div className="container mx-auto max-w-6xl">
+      <div className="container mx-auto max-w-7xl">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-text">About Me</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Software Developer with expertise in Android development, embedded systems, and AI-driven applications
+            Android Developer & AI Researcher with expertise in mobile applications, embedded systems, and machine learning solutions
           </p>
         </div>
 
-        {/* Main Content */}
-        <div className="grid lg:grid-cols-2 gap-12 mb-16">
-          {/* Left Column - Story */}
-          <div className="space-y-6">
-            <Card className="glass-card hover-glow">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-4 text-primary">My Journey</h3>
-                <div className="space-y-4 text-muted-foreground">
-                  <p>
-                    Currently pursuing B.Tech in Electronics and Computer Engineering at SRM Institute 
-                    of Science and Technology with a CGPA of 8.9. My journey began with a passion for 
-                    technology and has evolved into expertise in Android development and embedded systems.
-                  </p>
-                  <p>
-                    At Aakash Research Labs, I engineered FUSE-based multi-user storage systems and 
-                    refined Android vold modules in AOSP, significantly improving storage efficiency. 
-                    My work at Tata Steel Ltd involved building AI chatbots for healthcare applications.
-                  </p>
-                  <p>
-                    I'm an active contributor to open-source projects and have been recognized as a 
-                    Top 20% academic performer. My focus is on integrating LLMs, Kubernetes, and 
-                    real-time computing to build scalable solutions.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Technologies */}
-            <Card className="glass-card hover-glow">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-6 text-primary">Technologies I Love</h3>
+        {/* Skills Section */}
+        <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
+          {Object.entries(skills).map(([category, skillList], index) => (
+            <Card 
+              key={category}
+              className={`glass-card hover-glow opacity-0 fade-in-up`}
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <CardHeader>
+                <CardTitle className="text-lg font-semibold flex items-center gap-2">
+                  {category === "Programming Languages" && <Code2 className="h-5 w-5 text-primary" />}
+                  {category === "Databases" && <Database className="h-5 w-5 text-primary" />}
+                  {category === "Mobile Development" && <Smartphone className="h-5 w-5 text-primary" />}
+                  {category === "AI & Machine Learning" && <Brain className="h-5 w-5 text-primary" />}
+                  {category === "Tools & Technologies" && <GitBranch className="h-5 w-5 text-primary" />}
+                  {category === "Frameworks & Libraries" && <Server className="h-5 w-5 text-primary" />}
+                  {category}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
                 <div className="flex flex-wrap gap-2">
-                  {technologies.map((tech, index) => (
-                    <Badge 
-                      key={tech} 
-                      variant="outline" 
-                      className={`border-primary/50 text-primary hover:bg-primary/10 transition-all duration-300 opacity-0 fade-in-up`}
-                      style={{ animationDelay: `${index * 0.05}s` }}
-                    >
-                      {tech}
+                  {skillList.map((skill) => (
+                    <Badge key={skill} variant="outline" className="border-primary/50 text-primary/80">
+                      {skill}
                     </Badge>
                   ))}
                 </div>
               </CardContent>
             </Card>
-          </div>
+          ))}
+        </div>
 
-          {/* Right Column - Highlights */}
-          <div className="space-y-6">
-            {highlights.map((highlight, index) => (
-              <Card 
-                key={highlight.title} 
-                className={`glass-card hover-glow opacity-0 fade-in-up`}
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 p-3 rounded-lg bg-muted/30">
-                      {highlight.icon}
-                    </div>
+        {/* Experience Section */}
+        <div className="grid lg:grid-cols-1 gap-8 mb-16">
+          <Card className="glass-card hover-glow">
+            <CardHeader>
+              <CardTitle className="text-2xl font-bold flex items-center gap-3">
+                <Server className="h-6 w-6 text-primary" />
+                Professional Experience
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              {experience.map((exp, index) => (
+                <div key={index} className="border-l-2 border-primary/20 pl-6 relative">
+                  <div className="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-1"></div>
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2">
                     <div>
-                      <h4 className="text-xl font-semibold mb-2 text-foreground">
-                        {highlight.title}
-                      </h4>
-                      <p className="text-muted-foreground">
-                        {highlight.description}
-                      </p>
+                      <h4 className="font-semibold text-lg">{exp.title}</h4>
+                      <p className="text-primary font-medium">{exp.company}</p>
+                      <p className="text-muted-foreground text-sm mt-2">{exp.description}</p>
                     </div>
+                    <span className="text-sm text-muted-foreground bg-muted/50 px-3 py-1 rounded-full whitespace-nowrap">
+                      {exp.period}
+                    </span>
                   </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Honors and Awards Section */}
+        <div className="grid lg:grid-cols-1 gap-8 mb-16">
+          <Card className="glass-card hover-glow">
+            <CardHeader>
+              <CardTitle className="text-2xl font-bold flex items-center gap-3">
+                <Award className="h-6 w-6 text-primary" />
+                Honors & Awards
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              {honorsAndAwards.map((award, index) => (
+                <div key={index} className="border-l-2 border-primary/20 pl-6 relative">
+                  <div className="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-1"></div>
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2">
+                    <div>
+                      <h4 className="font-semibold text-lg flex items-center gap-2">
+                        <Trophy className="h-4 w-4 text-primary" />
+                        {award.title}
+                      </h4>
+                      <p className="text-primary font-medium">{award.organization}</p>
+                      <p className="text-muted-foreground text-sm mt-2">{award.description}</p>
+                    </div>
+                    <span className="text-sm text-muted-foreground bg-muted/50 px-3 py-1 rounded-full whitespace-nowrap">
+                      {award.date}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Research Publications Section */}
+        <div className="grid lg:grid-cols-1 gap-8 mb-16">
+          <Card className="glass-card hover-glow">
+            <CardHeader>
+              <CardTitle className="text-2xl font-bold flex items-center gap-3">
+                <BookOpen className="h-6 w-6 text-primary" />
+                Research Publications
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              {researchPublications.map((publication, index) => (
+                <div key={index} className="border-l-2 border-primary/20 pl-6 relative">
+                  <div className="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-1"></div>
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2">
+                    <div>
+                      <h4 className="font-semibold text-lg">
+                        <a 
+                          href={publication.link} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-primary hover:underline"
+                        >
+                          {publication.title}
+                        </a>
+                      </h4>
+                      <p className="text-primary font-medium">{publication.conference}</p>
+                      <p className="text-muted-foreground text-sm mt-2">{publication.description}</p>
+                    </div>
+                    <span className="text-sm text-muted-foreground bg-muted/50 px-3 py-1 rounded-full whitespace-nowrap">
+                      {publication.date}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
         </div>
 
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
             { label: "CGPA", value: "8.9" },
-            { label: "Projects Completed", value: "10+" },
+            { label: "Projects Completed", value: "6+" },
             { label: "Technologies", value: "25+" },
             { label: "Research Papers", value: "1" }
           ].map((stat, index) => (
