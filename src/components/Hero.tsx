@@ -39,29 +39,50 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Continuous Background Matrix Effect */}
-      <div className="absolute inset-0 opacity-10">
-        {[...Array(30)].map((_, i) => (
+      {/* Falling Asteroids Background Effect */}
+      <div className="absolute inset-0 overflow-hidden opacity-20">
+        {[...Array(25)].map((_, i) => (
           <div
             key={i}
-            className="absolute h-full w-px bg-primary animate-pulse"
+            className="absolute w-1 h-8 bg-gradient-to-b from-primary to-transparent rounded-full"
             style={{
               left: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 4}s`,
-              animationDuration: `${3 + Math.random() * 2}s`,
-              transform: `translateY(${Math.random() * 20 - 10}px)`
+              animationName: 'asteroid-fall',
+              animationDuration: `${2 + Math.random() * 4}s`,
+              animationDelay: `${Math.random() * 5}s`,
+              animationIterationCount: 'infinite',
+              animationTimingFunction: 'linear',
+              transform: `rotate(${15 + Math.random() * 30}deg)`
             }}
           />
         ))}
         {[...Array(15)].map((_, i) => (
           <div
-            key={`floating-${i}`}
-            className="absolute w-2 h-2 bg-primary/20 rounded-full animate-pulse"
+            key={`large-${i}`}
+            className="absolute w-2 h-12 bg-gradient-to-b from-primary/80 to-transparent rounded-full"
             style={{
               left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${4 + Math.random() * 3}s`
+              animationName: 'asteroid-fall',
+              animationDuration: `${3 + Math.random() * 3}s`,
+              animationDelay: `${Math.random() * 6}s`,
+              animationIterationCount: 'infinite',
+              animationTimingFunction: 'ease-in',
+              transform: `rotate(${20 + Math.random() * 25}deg)`
+            }}
+          />
+        ))}
+        {[...Array(10)].map((_, i) => (
+          <div
+            key={`small-${i}`}
+            className="absolute w-0.5 h-6 bg-gradient-to-b from-primary/60 to-transparent rounded-full"
+            style={{
+              left: `${Math.random() * 100}%`,
+              animationName: 'asteroid-fall',
+              animationDuration: `${1.5 + Math.random() * 2}s`,
+              animationDelay: `${Math.random() * 4}s`,
+              animationIterationCount: 'infinite',
+              animationTimingFunction: 'ease-out',
+              transform: `rotate(${10 + Math.random() * 40}deg)`
             }}
           />
         ))}
@@ -78,7 +99,7 @@ const Hero = () => {
                 className="object-cover"
               />
               <AvatarFallback className="text-4xl font-mono font-bold gradient-text">
-                {"< />"}
+                AM
               </AvatarFallback>
             </Avatar>
           </div>
