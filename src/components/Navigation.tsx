@@ -53,7 +53,7 @@ const Navigation = () => {
             }}
             className="text-2xl font-bold gradient-text hover-glow transition-all duration-300"
           >
-            {"<JD />"}
+            AM
           </a>
 
           {/* Desktop Navigation */}

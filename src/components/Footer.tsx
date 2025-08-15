@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="text-2xl font-bold gradient-text">{"<JD />"}</div>
+            <div className="text-2xl font-bold gradient-text">AM</div>
             <p className="text-muted-foreground max-w-xs">
               Software Developer specializing in Android development, embedded systems, and AI-driven applications.
             </p>
