@@ -14,21 +14,28 @@ const About = () => {
 
   const workExperience = [
     {
-      title: "Trainee Engineer (Internship)",
+      title: "Technical Team Member (Part-time)",
+      company: "Aakash Research Labs",
+      period: "Nov 2023 - Present",
+      description: "Engineered FUSE-based multi-user storage system in Penguin OS, reducing volume management overhead by 20%. Automated CI/CD pipelines, accelerating build and deployment cycles by 30%.",
+      link: "https://drive.google.com/file/d/1NbW2ZCwx_YazSCKM4MHoa18OtYmpPGI4/view?usp=drivesdk"
+    },
+    {
+      title: "Project Intern (Remote)",
       company: "Tata Steel Ltd",
-      period: "May 2024 - Jul 2024",
-      description: "Gained hands-on experience in industrial processes and engineering applications in steel manufacturing.",
+      period: "Dec 2023 - Jan 2024",
+      description: "Built an AI chatbot for healthcare, increasing disease identification accuracy by 20% using NLP. Created symptom-based diagnosis system, boosting response efficiency by 25%.",
       link: "https://drive.google.com/file/d/12uGODs0wDUg57oo2HUnVIdV1stk0JaIU/view?usp=drivesdk"
     }
   ];
 
   const volunteerExperience = [
     {
-      title: "Research Intern",
-      organization: "Akash Research Labs",
-      period: "Jun 2024 - Aug 2024",
-      description: "Contributed to research projects in artificial intelligence and machine learning applications.",
-      link: "https://drive.google.com/file/d/1NbW2ZCwx_YazSCKM4MHoa18OtYmpPGI4/view?usp=drivesdk"
+      title: "Community Engagement Volunteer",
+      organization: "Tata Steel Foundation",
+      period: "July 2024 - August 2024",
+      description: "Led on-site evaluations of the Pre-Matric Coaching Program, conducting structured interviews with students, teachers, and administrators to assess educational impact. Compiled data-driven reports with actionable insights.",
+      link: "#"
     }
   ];
 
@@ -55,22 +62,22 @@ const About = () => {
 
   const honorsAndAwards = [
     {
-      title: "IEEE SCOPES 2024 Research Publication",
-      organization: "IEEE",
-      date: "Dec 2024",
-      description: "Published research paper on 'Integrating Intelligent Chatbots in Healthcare: AI Based Healthcare Chatbot'"
+      title: "Top 20% Academic Excellence",
+      organization: "SRM Institute of Science and Technology",
+      date: "Ongoing",
+      description: "Recognized for being in the top 20% of the Electronics and Computer Engineering branch. Demonstrates strong academic performance and technical expertise."
+    },
+    {
+      title: "AI HackDay'24 Finalist",
+      organization: "Department of ECE, SRMIST",
+      date: "April 2024",
+      description: "Secured a spot in the final round of the AI Hackathon at SRMIST with the project Radiant AI. Showcased innovative problem-solving skills in artificial intelligence and machine learning."
     },
     {
       title: "Microcontroller-Based Project Expo Finalist",
-      organization: "Technical Institution",
-      date: "Nov 2024",
-      description: "Advanced to final round for Implementation of Sixth Sense Using Raspberry Pi project"
-    },
-    {
-      title: "Academic Excellence",
-      organization: "University",
-      date: "Ongoing",
-      description: "Consistent high performance in Computer Science and Engineering coursework"
+      organization: "Department of ECE, SRMIST",
+      date: "November 2024",
+      description: "Advanced to the final round of the Microcontroller-Based Project Expo with the project 'Implementation of Sixth Sense Using Raspberry Pi'."
     }
   ];
 

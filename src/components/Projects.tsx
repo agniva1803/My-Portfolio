@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Github, ExternalLink, Play } from "lucide-react";
 import pengoxImage from "@/assets/pengox-project.png";
 import penguinosImage from "@/assets/penguinos-project.png";
+import radiantAiImage from "@/assets/radiant-ai-project.png";
 import secureFtpImage from "@/assets/secure-ftp-project.png";
 
 const Projects = () => {
@@ -31,7 +32,7 @@ const Projects = () => {
     {
       title: "Radiant AI: Intelligent Healthcare Chatbot",
       description: "AI chatbot for symptom-based diagnosis using NLP, increasing diagnostic accuracy by 20%. Features adaptive query model and machine learning optimization.",
-      image: "/api/placeholder/400/300",
+      image: radiantAiImage,
       tags: ["Python", "SQL", "Flask", "TensorFlow", "NLP", "Machine Learning"],
       github: "https://github.com/agniva1803/RadiantAI",
       demo: "https://drive.google.com/file/d/1fKcAZ5nBQRpj_oA_qBmub4eawHXe0V7k/view?usp=drivesdk",
