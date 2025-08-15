@@ -4,7 +4,6 @@ import { Badge } from "@/components/ui/badge";
 import { Github, ExternalLink, Play } from "lucide-react";
 import pengoxImage from "@/assets/pengox-project.png";
 import penguinosImage from "@/assets/penguinos-project.png";
-import radiantAiImage from "@/assets/radiant-ai-project.png";
 import secureFtpImage from "@/assets/secure-ftp-project.png";
 
 const Projects = () => {
@@ -12,7 +11,7 @@ const Projects = () => {
     {
       title: "PengoX: Full-Stack Food Ordering & Delivery App",
       description: "Complete MERN stack application for food ordering with dynamic cart, user authentication, Stripe API integration, and admin dashboard. Deployed on Vercel with separate backend hosting.",
-      image: pengoxImage,
+      image: "/lovable-uploads/66c9b4d5-0c77-4105-9a29-db68aa4abd60.png",
       tags: ["React", "Node.js", "Express", "MongoDB", "JWT", "Stripe", "Vercel"],
       github: "https://github.com/agniva1803/PengoX",
       demo: "https://pengo-x-z857-5s7qeejks-agniva-mukherjees-projects-8ea5e944.vercel.app",
@@ -22,7 +21,7 @@ const Projects = () => {
     {
       title: "PenguinOS: Custom Android-Based Operating System",
       description: "FUSE-based system for multi-user storage management, reducing file access times by 15%. Enhanced Android vold module in AOSP with CI/CD pipelines.",
-      image: penguinosImage,
+      image: "/lovable-uploads/cef9334c-d9f3-451f-871e-58b5bf8cbf00.png",
       tags: ["C++", "Java", "Shell Script", "AOSP", "FUSE", "Git", "Docker", "Kubernetes"],
       github: "https://github.com/Project-PenguinOS",
       demo: "https://sourceforge.net/projects/penguinos/files/peridot/brevity/PenguinOS-brevity-20250813-peridot-Beta.zip/download",
@@ -32,7 +31,7 @@ const Projects = () => {
     {
       title: "Radiant AI: Intelligent Healthcare Chatbot",
       description: "AI chatbot for symptom-based diagnosis using NLP, increasing diagnostic accuracy by 20%. Features adaptive query model and machine learning optimization.",
-      image: radiantAiImage,
+      image: "/lovable-uploads/64459ed7-284b-446b-a711-d447979f5ca6.png",
       tags: ["Python", "SQL", "Flask", "TensorFlow", "NLP", "Machine Learning"],
       github: "https://github.com/agniva1803/RadiantAI",
       demo: "https://drive.google.com/file/d/1fKcAZ5nBQRpj_oA_qBmub4eawHXe0V7k/view?usp=drivesdk",
