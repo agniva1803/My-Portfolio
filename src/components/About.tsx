@@ -12,7 +12,27 @@ const About = () => {
     "AI & Machine Learning": ["NLP", "Computer Vision", "Machine Learning", "AI Chatbots"]
   };
 
-  const experience = [
+  const workExperience = [
+    {
+      title: "Trainee Engineer (Internship)",
+      company: "Tata Steel Ltd",
+      period: "May 2024 - Jul 2024",
+      description: "Gained hands-on experience in industrial processes and engineering applications in steel manufacturing.",
+      link: "https://drive.google.com/file/d/12uGODs0wDUg57oo2HUnVIdV1stk0JaIU/view?usp=drivesdk"
+    }
+  ];
+
+  const volunteerExperience = [
+    {
+      title: "Research Intern",
+      organization: "Akash Research Labs",
+      period: "Jun 2024 - Aug 2024",
+      description: "Contributed to research projects in artificial intelligence and machine learning applications.",
+      link: "https://drive.google.com/file/d/1NbW2ZCwx_YazSCKM4MHoa18OtYmpPGI4/view?usp=drivesdk"
+    }
+  ];
+
+  const projectExperience = [
     {
       title: "Android Developer",
       company: "PenguinOS Project",
@@ -107,17 +127,87 @@ const About = () => {
           ))}
         </div>
 
-        {/* Experience Section */}
+        {/* Work Experience Section */}
         <div className="grid lg:grid-cols-1 gap-8 mb-16">
           <Card className="glass-card hover-glow">
             <CardHeader>
               <CardTitle className="text-2xl font-bold flex items-center gap-3">
                 <Server className="h-6 w-6 text-primary" />
-                Professional Experience
+                Work Experience
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
-              {experience.map((exp, index) => (
+              {workExperience.map((exp, index) => (
+                <div key={index} className="border-l-2 border-primary/20 pl-6 relative">
+                  <div className="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-1"></div>
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2">
+                    <div>
+                      <h4 className="font-semibold text-lg">
+                        {exp.link ? (
+                          <a href={exp.link} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                            {exp.title}
+                          </a>
+                        ) : exp.title}
+                      </h4>
+                      <p className="text-primary font-medium">{exp.company}</p>
+                      <p className="text-muted-foreground text-sm mt-2">{exp.description}</p>
+                    </div>
+                    <span className="text-sm text-muted-foreground bg-muted/50 px-3 py-1 rounded-full whitespace-nowrap">
+                      {exp.period}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Volunteer Experience Section */}
+        <div className="grid lg:grid-cols-1 gap-8 mb-16">
+          <Card className="glass-card hover-glow">
+            <CardHeader>
+              <CardTitle className="text-2xl font-bold flex items-center gap-3">
+                <Medal className="h-6 w-6 text-primary" />
+                Volunteer Experience
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              {volunteerExperience.map((exp, index) => (
+                <div key={index} className="border-l-2 border-primary/20 pl-6 relative">
+                  <div className="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-1"></div>
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2">
+                    <div>
+                      <h4 className="font-semibold text-lg">
+                        {exp.link ? (
+                          <a href={exp.link} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                            {exp.title}
+                          </a>
+                        ) : exp.title}
+                      </h4>
+                      <p className="text-primary font-medium">{exp.organization}</p>
+                      <p className="text-muted-foreground text-sm mt-2">{exp.description}</p>
+                    </div>
+                    <span className="text-sm text-muted-foreground bg-muted/50 px-3 py-1 rounded-full whitespace-nowrap">
+                      {exp.period}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Project Experience Section */}
+        <div className="grid lg:grid-cols-1 gap-8 mb-16">
+          <Card className="glass-card hover-glow">
+            <CardHeader>
+              <CardTitle className="text-2xl font-bold flex items-center gap-3">
+                <Code2 className="h-6 w-6 text-primary" />
+                Project Experience
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              {projectExperience.map((exp, index) => (
                 <div key={index} className="border-l-2 border-primary/20 pl-6 relative">
                   <div className="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-1"></div>
                   <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2">

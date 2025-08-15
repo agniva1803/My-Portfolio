@@ -19,16 +19,6 @@ const Projects = () => {
       period: "Mar 2025 - May 2025"
     },
     {
-      title: "Secure FTP Client-Server Application",
-      description: "Optimized file transfer system with secure FTP protocol for encrypted transfers, reducing transfer times by 20%. Features socket programming and multi-threading for efficiency.",
-      image: secureFtpImage, 
-      tags: ["Python", "Sockets", "FTP Protocol", "Multi-threading", "Encryption"],
-      github: "https://github.com/agniva1803",
-      demo: "#",
-      featured: true,
-      period: "Oct 2024 - Nov 2024"
-    },
-    {
       title: "PenguinOS: Custom Android-Based Operating System",
       description: "FUSE-based system for multi-user storage management, reducing file access times by 15%. Enhanced Android vold module in AOSP with CI/CD pipelines.",
       image: penguinosImage,
@@ -45,18 +35,18 @@ const Projects = () => {
       tags: ["Python", "SQL", "Flask", "TensorFlow", "NLP", "Machine Learning"],
       github: "https://github.com/agniva1803/RadiantAI",
       demo: "https://drive.google.com/file/d/1fKcAZ5nBQRpj_oA_qBmub4eawHXe0V7k/view?usp=drivesdk",
-      featured: false,
+      featured: true,
       period: "Dec 2023 - Jan 2024"
     },
     {
-      title: "Implementation of Sixth Sense Using Raspberry Pi",
-      description: "Microcontroller-based project implementing sixth sense technology using Raspberry Pi, advancing to the final round of Microcontroller-Based Project Expo.",
-      image: "/api/placeholder/400/300",
-      tags: ["Raspberry Pi", "Computer Vision", "OpenCV", "Python", "Arduino"],
+      title: "Secure FTP Client-Server Application",
+      description: "Optimized file transfer system with secure FTP protocol for encrypted transfers, reducing transfer times by 20%. Features socket programming and multi-threading for efficiency.",
+      image: secureFtpImage, 
+      tags: ["Python", "Sockets", "FTP Protocol", "Multi-threading", "Encryption"],
       github: "https://github.com/agniva1803",
       demo: "#",
       featured: false,
-      period: "Nov 2024"
+      period: "Oct 2024 - Nov 2024"
     }
   ];
 
