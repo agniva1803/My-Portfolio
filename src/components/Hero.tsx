@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Github, Linkedin, Mail, Download } from "lucide-react";
 
 const Hero = () => {
@@ -39,11 +40,18 @@ const Hero = () => {
 
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
-          {/* Avatar/Logo */}
+          {/* Profile Avatar */}
           <div className="mb-8 flex justify-center">
-            <div className="w-32 h-32 rounded-full glass-card flex items-center justify-center glow-cyan hover-glow transition-all duration-300">
-              <span className="text-4xl font-mono font-bold gradient-text">{"< />"}</span>
-            </div>
+            <Avatar className="w-32 h-32 glass-card glow-cyan hover-glow transition-all duration-300">
+              <AvatarImage 
+                src="/lovable-uploads/fe66ebca-76fa-4b75-a4a0-09bbb546843b.png" 
+                alt="Agniva Mukherjee Profile"
+                className="object-cover"
+              />
+              <AvatarFallback className="text-4xl font-mono font-bold gradient-text">
+                {"< />"}
+              </AvatarFallback>
+            </Avatar>
           </div>
 
           {/* Main Title */}
