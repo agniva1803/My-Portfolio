@@ -36,8 +36,8 @@ const Contact = () => {
     {
       icon: <Mail className="h-6 w-6" />,
       label: "Email",
-      value: "john@developer.com",
-      href: "mailto:john@developer.com"
+      value: "agniva@developer.com",
+      href: "mailto:agniva@developer.com"
     },
     {
       icon: <Phone className="h-6 w-6" />,
@@ -58,19 +58,19 @@ const Contact = () => {
       icon: <Github className="h-6 w-6" />,
       label: "GitHub",
       href: "#",
-      username: "@johndeveloper"
+      username: "@agnivadeveloper"
     },
     {
       icon: <Linkedin className="h-6 w-6" />,
       label: "LinkedIn",
       href: "#",
-      username: "john-developer"
+      username: "agniva-mukherjee"
     },
     {
       icon: <Twitter className="h-6 w-6" />,
       label: "Twitter",
       href: "#",
-      username: "@johndev"
+      username: "@agnivadev"
     }
   ];
 

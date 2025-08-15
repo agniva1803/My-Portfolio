@@ -48,7 +48,7 @@ const Hero = () => {
 
           {/* Main Title */}
           <h1 className="text-5xl md:text-7xl font-bold mb-6 opacity-0 fade-in-up">
-            <span className="gradient-text">John Developer</span>
+            <span className="gradient-text">Agniva Mukherjee</span>
           </h1>
 
           {/* Typewriter Subtitle */}

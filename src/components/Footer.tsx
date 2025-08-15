@@ -40,10 +40,10 @@ const Footer = () => {
             <h3 className="font-semibold text-primary">Get In Touch</h3>
             <div className="space-y-2">
               <a 
-                href="mailto:john@developer.com"
+                href="mailto:agniva@developer.com"
                 className="block text-muted-foreground hover:text-primary transition-colors duration-300"
               >
-                john@developer.com
+                agniva@developer.com
               </a>
               <a 
                 href="tel:+15551234567"
@@ -60,7 +60,7 @@ const Footer = () => {
           <div className="flex items-center space-x-2 text-muted-foreground mb-4 md:mb-0">
             <span>Made with</span>
             <Heart className="h-4 w-4 text-red-500 animate-pulse" />
-            <span>by John Developer © {currentYear}</span>
+            <span>by Agniva Mukherjee © {currentYear}</span>
           </div>
 
           <div className="flex items-center space-x-4">
