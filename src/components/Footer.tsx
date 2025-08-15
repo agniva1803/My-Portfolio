@@ -46,10 +46,10 @@ const Footer = () => {
                 agnivamukherjee8204@gmail.com
               </a>
               <a 
-                href="tel:+15551234567"
+                href="tel:+917632005304"
                 className="block text-muted-foreground hover:text-primary transition-colors duration-300"
               >
-                +1 (555) 123-4567
+                +91 7632005304
               </a>
             </div>
           </div>

@@ -4,7 +4,7 @@ import { Github, Linkedin, Mail, Download } from "lucide-react";
 
 const Hero = () => {
   const [text, setText] = useState("");
-  const fullText = "Full Stack Developer & AI Engineer";
+  const fullText = "Software Developer & AI Engineer";
 
   useEffect(() => {
     let i = 0;
@@ -61,8 +61,8 @@ const Hero = () => {
 
           {/* Description */}
           <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto opacity-0 fade-in-up stagger-2">
-            Experienced in Android development, embedded systems, and cloud infrastructure. 
-            Passionate about AI-driven applications, open-source contributions, and building scalable solutions.
+            Seeking role in software development with expertise in Android development, embedded systems, and cloud infrastructure. 
+            Experienced in open-source contributions, GitHub-based collaboration, and AI-driven applications.
           </p>
 
           {/* CTA Buttons */}

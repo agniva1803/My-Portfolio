@@ -6,58 +6,64 @@ import { Github, ExternalLink, Play } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      title: "AI-Powered Analytics Platform",
-      description: "Full-stack analytics platform with real-time ML insights, built with React, Node.js, and TensorFlow. Processes millions of data points daily.",
+      title: "PengoX: Full-Stack Food Ordering & Delivery App",
+      description: "Complete MERN stack application for food ordering with dynamic cart, user authentication, Stripe API integration, and admin dashboard. Deployed on Vercel with separate backend hosting.",
       image: "/api/placeholder/400/300",
-      tags: ["React", "Node.js", "TensorFlow", "AWS", "PostgreSQL"],
-      github: "#",
+      tags: ["React", "Node.js", "Express", "MongoDB", "JWT", "Stripe", "Vercel"],
+      github: "https://github.com/agniva1803",
       demo: "#",
-      featured: true
+      featured: true,
+      period: "Mar 2025 - May 2025"
     },
     {
-      title: "Cloud Native E-Commerce",
-      description: "Microservices-based e-commerce platform deployed on Kubernetes with automated CI/CD pipeline and 99.9% uptime.",
+      title: "Secure FTP Client-Server Application",
+      description: "Optimized file transfer system with secure FTP protocol for encrypted transfers, reducing transfer times by 20%. Features socket programming and multi-threading for efficiency.",
       image: "/api/placeholder/400/300", 
-      tags: ["Go", "Kubernetes", "Docker", "Redis", "GraphQL"],
-      github: "#",
+      tags: ["Python", "Sockets", "FTP Protocol", "Multi-threading", "Encryption"],
+      github: "https://github.com/agniva1803",
       demo: "#",
-      featured: true
+      featured: true,
+      period: "Oct 2024 - Nov 2024"
     },
     {
-      title: "Real-time Chat Application",
-      description: "Scalable chat app with WebSocket connections, message encryption, and AI-powered moderation features.",
+      title: "PenguinOS: Custom Android-Based Operating System",
+      description: "FUSE-based system for multi-user storage management, reducing file access times by 15%. Enhanced Android vold module in AOSP with CI/CD pipelines.",
       image: "/api/placeholder/400/300",
-      tags: ["React", "Socket.io", "Node.js", "MongoDB", "OpenAI"],
-      github: "#",
+      tags: ["C++", "Java", "Shell Script", "AOSP", "FUSE", "Git", "Docker", "Kubernetes"],
+      github: "https://github.com/agniva1803",
       demo: "#",
-      featured: false
+      featured: false,
+      period: "Nov 2023 - Present"
     },
     {
-      title: "DevOps Automation Suite",
-      description: "Complete DevOps toolkit for automated deployments, monitoring, and infrastructure management across multiple cloud providers.",
+      title: "Intelligent Healthcare Chatbot: AI-Driven Symptom Checker",
+      description: "AI chatbot for symptom-based diagnosis using NLP, increasing diagnostic accuracy by 20%. Features adaptive query model and machine learning optimization.",
       image: "/api/placeholder/400/300",
-      tags: ["Python", "Terraform", "AWS", "GCP", "Jenkins"],
-      github: "#",
+      tags: ["Python", "SQL", "Flask", "TensorFlow", "NLP", "Machine Learning"],
+      github: "https://github.com/agniva1803",
       demo: "#",
-      featured: false
+      featured: false,
+      period: "Dec 2023 - Jan 2024"
     },
     {
-      title: "Machine Learning Pipeline",
-      description: "End-to-end ML pipeline for computer vision tasks with automated model training, validation, and deployment.",
+      title: "IEEE Research Publication",
+      description: "Published research on 'Integrating Intelligent Chatbots in Healthcare: AI Based Healthcare Chatbot' in IEEE SCOPES 2024 Conference Proceedings.",
       image: "/api/placeholder/400/300",
-      tags: ["Python", "PyTorch", "MLflow", "Docker", "Airflow"],
+      tags: ["Research", "AI", "Healthcare", "NLP", "Machine Learning", "IEEE"],
       github: "#",
-      demo: "#",
-      featured: false
+      demo: "https://ieeexplore.ieee.org/author/273156730417953",
+      featured: false,
+      period: "Dec 2024"
     },
     {
-      title: "Serverless API Gateway",
-      description: "High-performance API gateway built with serverless architecture, handling millions of requests with auto-scaling.",
+      title: "Implementation of Sixth Sense Using Raspberry Pi",
+      description: "Microcontroller-based project implementing sixth sense technology using Raspberry Pi, advancing to the final round of Microcontroller-Based Project Expo.",
       image: "/api/placeholder/400/300",
-      tags: ["Lambda", "API Gateway", "DynamoDB", "CloudFormation"],
-      github: "#",
+      tags: ["Raspberry Pi", "Computer Vision", "OpenCV", "Python", "Arduino"],
+      github: "https://github.com/agniva1803",
       demo: "#",
-      featured: false
+      featured: false,
+      period: "Nov 2024"
     }
   ];
 
@@ -69,9 +75,9 @@ const Projects = () => {
       <div className="container mx-auto max-w-7xl">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-text">Featured Projects</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-text">My Projects</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A selection of projects that showcase my expertise in full-stack development and cloud technologies
+            Real-world projects showcasing my expertise in Android development, AI applications, and full-stack solutions
           </p>
         </div>
 
@@ -96,6 +102,7 @@ const Projects = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
+                <div className="text-sm text-muted-foreground font-medium">{project.period}</div>
                 <p className="text-muted-foreground">{project.description}</p>
                 
                 <div className="flex flex-wrap gap-2">
@@ -107,14 +114,25 @@ const Projects = () => {
                 </div>
 
                 <div className="flex gap-4 pt-2">
-                  <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-primary/10">
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    className="border-primary text-primary hover:bg-primary/10"
+                    onClick={() => window.open(project.github, '_blank')}
+                  >
                     <Github className="mr-2 h-4 w-4" />
                     Code
                   </Button>
-                  <Button size="sm" className="bg-primary hover:bg-primary/80">
-                    <ExternalLink className="mr-2 h-4 w-4" />
-                    Demo
-                  </Button>
+                  {project.demo !== "#" && (
+                    <Button 
+                      size="sm" 
+                      className="bg-primary hover:bg-primary/80"
+                      onClick={() => window.open(project.demo, '_blank')}
+                    >
+                      <ExternalLink className="mr-2 h-4 w-4" />
+                      {project.title.includes("IEEE") ? "Research" : "Demo"}
+                    </Button>
+                  )}
                 </div>
               </CardContent>
             </Card>
@@ -168,7 +186,12 @@ const Projects = () => {
 
         {/* View More */}
         <div className="text-center">
-          <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary/10">
+          <Button 
+            variant="outline" 
+            size="lg" 
+            className="border-primary text-primary hover:bg-primary/10"
+            onClick={() => window.open('https://github.com/agniva1803', '_blank')}
+          >
             <Github className="mr-2 h-5 w-5" />
             View All Projects on GitHub
           </Button>

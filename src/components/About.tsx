@@ -6,30 +6,32 @@ const About = () => {
   const highlights = [
     {
       icon: <Code className="h-8 w-8 text-primary" />,
-      title: "Full Stack Development",
-      description: "Expert in modern web technologies including React, Node.js, and TypeScript"
+      title: "Android Development",
+      description: "Expert in Kotlin, Java, and Android SDK with experience in AOSP and embedded systems"
     },
     {
       icon: <Cloud className="h-8 w-8 text-accent" />,
-      title: "Cloud Native",
-      description: "Specialized in AWS, Kubernetes, Docker, and microservices architecture"
+      title: "Cloud Infrastructure",
+      description: "Specialized in AWS, Google Cloud, Docker, Kubernetes, and CI/CD pipeline automation"
     },
     {
       icon: <Brain className="h-8 w-8 text-secondary" />,
       title: "AI & Machine Learning",
-      description: "Building intelligent applications with Python, TensorFlow, and LLMs"
+      description: "Building intelligent healthcare chatbots and AI-driven applications with NLP and ML"
     },
     {
       icon: <Rocket className="h-8 w-8 text-primary" />,
-      title: "DevOps & Automation",
-      description: "CI/CD pipelines, Infrastructure as Code, and automated deployments"
+      title: "Full Stack Development",
+      description: "MERN stack applications with secure FTP systems and real-time computing solutions"
     }
   ];
 
   const technologies = [
-    "React", "TypeScript", "Node.js", "Python", "Go", "AWS", "Kubernetes", 
-    "Docker", "PostgreSQL", "MongoDB", "Redis", "GraphQL", "REST APIs",
-    "TensorFlow", "OpenAI", "Microservices", "Serverless", "CI/CD"
+    "Python", "C++", "Java", "Kotlin", "JavaScript", "SQL", "HTML", "CSS", 
+    "React", "Node.js", "MySQL", "SQLite", "TensorFlow", "Scikit-learn", "OpenCV", 
+    "YOLOv5", "Pandas", "NumPy", "AWS", "Google Cloud", "Firebase", "Git", 
+    "Docker", "Kubernetes", "CI/CD", "Android Studio", "Flutter", "Linux", 
+    "Arduino", "Raspberry Pi", "MATLAB", "SciPy", "SymPy"
   ];
 
   return (
@@ -39,7 +41,7 @@ const About = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-text">About Me</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Passionate developer with 5+ years of experience building innovative solutions
+            Software Developer with expertise in Android development, embedded systems, and AI-driven applications
           </p>
         </div>
 
@@ -52,17 +54,19 @@ const About = () => {
                 <h3 className="text-2xl font-bold mb-4 text-primary">My Journey</h3>
                 <div className="space-y-4 text-muted-foreground">
                   <p>
-                    Started my journey as a curious developer fascinated by the intersection of 
-                    technology and innovation. Over the years, I've evolved into a full-stack 
-                    engineer with deep expertise in cloud-native architectures and AI integration.
+                    Currently pursuing B.Tech in Electronics and Computer Engineering at SRM Institute 
+                    of Science and Technology with a CGPA of 8.9. My journey began with a passion for 
+                    technology and has evolved into expertise in Android development and embedded systems.
                   </p>
                   <p>
-                    My passion lies in building scalable, efficient systems that solve real-world 
-                    problems. I believe in clean code, robust architecture, and continuous learning.
+                    At Aakash Research Labs, I engineered FUSE-based multi-user storage systems and 
+                    refined Android vold modules in AOSP, significantly improving storage efficiency. 
+                    My work at Tata Steel Ltd involved building AI chatbots for healthcare applications.
                   </p>
                   <p>
-                    Currently focused on leveraging AI and machine learning to create intelligent 
-                    applications that enhance user experiences and drive business value.
+                    I'm an active contributor to open-source projects and have been recognized as a 
+                    Top 20% academic performer. My focus is on integrating LLMs, Kubernetes, and 
+                    real-time computing to build scalable solutions.
                   </p>
                 </div>
               </CardContent>
@@ -119,10 +123,10 @@ const About = () => {
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
-            { label: "Years Experience", value: "5+" },
-            { label: "Projects Completed", value: "50+" },
-            { label: "Technologies", value: "20+" },
-            { label: "Happy Clients", value: "30+" }
+            { label: "CGPA", value: "8.9" },
+            { label: "Projects Completed", value: "10+" },
+            { label: "Technologies", value: "25+" },
+            { label: "Research Papers", value: "1" }
           ].map((stat, index) => (
             <Card 
               key={stat.label} 
