@@ -5,34 +5,63 @@ import { Github, Linkedin, Mail, Download } from "lucide-react";
 
 const Hero = () => {
   const [text, setText] = useState("");
-  const fullText = "Software Developer & AI Engineer";
+  const [roleIndex, setRoleIndex] = useState(0);
+  const roles = ["Full Stack Developer", "Android Developer", "Machine Learning Engineer"];
+  const [charIndex, setCharIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
-    let i = 0;
-    const timer = setInterval(() => {
-      if (i < fullText.length) {
-        setText(fullText.slice(0, i + 1));
-        i++;
-      } else {
-        clearInterval(timer);
-      }
-    }, 100);
+    const currentRole = roles[roleIndex];
+    const typingSpeed = isDeleting ? 50 : 150;
+    const pauseTime = isDeleting ? 500 : 2000;
 
-    return () => clearInterval(timer);
-  }, []);
+    const timer = setTimeout(() => {
+      if (!isDeleting) {
+        if (charIndex < currentRole.length) {
+          setText(currentRole.slice(0, charIndex + 1));
+          setCharIndex(charIndex + 1);
+        } else {
+          setTimeout(() => setIsDeleting(true), pauseTime);
+        }
+      } else {
+        if (charIndex > 0) {
+          setText(currentRole.slice(0, charIndex - 1));
+          setCharIndex(charIndex - 1);
+        } else {
+          setIsDeleting(false);
+          setRoleIndex((roleIndex + 1) % roles.length);
+        }
+      }
+    }, typingSpeed);
+
+    return () => clearTimeout(timer);
+  }, [charIndex, isDeleting, roleIndex, roles]);
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Background Matrix Effect */}
+      {/* Continuous Background Matrix Effect */}
       <div className="absolute inset-0 opacity-10">
-        {[...Array(20)].map((_, i) => (
+        {[...Array(30)].map((_, i) => (
           <div
             key={i}
             className="absolute h-full w-px bg-primary animate-pulse"
             style={{
               left: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 2}s`,
-              animationDuration: `${2 + Math.random() * 3}s`
+              animationDelay: `${Math.random() * 4}s`,
+              animationDuration: `${3 + Math.random() * 2}s`,
+              transform: `translateY(${Math.random() * 20 - 10}px)`
+            }}
+          />
+        ))}
+        {[...Array(15)].map((_, i) => (
+          <div
+            key={`floating-${i}`}
+            className="absolute w-2 h-2 bg-primary/20 rounded-full animate-pulse"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 5}s`,
+              animationDuration: `${4 + Math.random() * 3}s`
             }}
           />
         ))}
@@ -54,9 +83,9 @@ const Hero = () => {
             </Avatar>
           </div>
 
-          {/* Main Title */}
+          {/* Animated Name Title */}
           <h1 className="text-5xl md:text-7xl font-bold mb-6 opacity-0 fade-in-up">
-            <span className="gradient-text">Agniva Mukherjee</span>
+            <span className="gradient-text animate-pulse">Hi, I'm Agniva Mukherjee</span>
           </h1>
 
           {/* Typewriter Subtitle */}
