@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="text-2xl font-bold gradient-text">{"<JD />"}</div>
             <p className="text-muted-foreground max-w-xs">
-              Full Stack Developer & AI Engineer passionate about building innovative solutions.
+              Software Developer specializing in Android development, embedded systems, and AI-driven applications.
             </p>
           </div>
 
@@ -40,10 +40,10 @@ const Footer = () => {
             <h3 className="font-semibold text-primary">Get In Touch</h3>
             <div className="space-y-2">
               <a 
-                href="mailto:agniva@developer.com"
+                href="mailto:agnivamukherjee8204@gmail.com"
                 className="block text-muted-foreground hover:text-primary transition-colors duration-300"
               >
-                agniva@developer.com
+                agnivamukherjee8204@gmail.com
               </a>
               <a 
                 href="tel:+15551234567"
@@ -65,21 +65,25 @@ const Footer = () => {
 
           <div className="flex items-center space-x-4">
             <a
-              href="#"
+              href="https://github.com/agniva1803"
               className="text-muted-foreground hover:text-primary transition-colors duration-300 hover-glow"
               aria-label="GitHub"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Github className="h-5 w-5" />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/agniva-mukherjee-b2647b21a"
               className="text-muted-foreground hover:text-primary transition-colors duration-300 hover-glow"
               aria-label="LinkedIn"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Linkedin className="h-5 w-5" />
             </a>
             <a
-              href="#"
+              href="mailto:agnivamukherjee8204@gmail.com"
               className="text-muted-foreground hover:text-primary transition-colors duration-300 hover-glow"
               aria-label="Email"
             >

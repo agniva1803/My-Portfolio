@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, Code2, Trophy, GraduationCap } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
@@ -36,8 +36,8 @@ const Contact = () => {
     {
       icon: <Mail className="h-6 w-6" />,
       label: "Email",
-      value: "agniva@developer.com",
-      href: "mailto:agniva@developer.com"
+      value: "agnivamukherjee8204@gmail.com",
+      href: "mailto:agnivamukherjee8204@gmail.com"
     },
     {
       icon: <Phone className="h-6 w-6" />,
@@ -48,7 +48,7 @@ const Contact = () => {
     {
       icon: <MapPin className="h-6 w-6" />,
       label: "Location",
-      value: "San Francisco, CA",
+      value: "Kolkata, West Bengal, India",
       href: "#"
     }
   ];
@@ -57,20 +57,38 @@ const Contact = () => {
     {
       icon: <Github className="h-6 w-6" />,
       label: "GitHub",
-      href: "#",
-      username: "@agnivadeveloper"
+      href: "https://github.com/agniva1803",
+      username: "@agniva1803"
     },
     {
       icon: <Linkedin className="h-6 w-6" />,
       label: "LinkedIn",
-      href: "#",
+      href: "https://www.linkedin.com/in/agniva-mukherjee-b2647b21a",
       username: "agniva-mukherjee"
     },
     {
       icon: <Twitter className="h-6 w-6" />,
       label: "Twitter",
-      href: "#",
-      username: "@agnivadev"
+      href: "https://x.com/AgnivaMukh23619",
+      username: "@AgnivaMukh23619"
+    },
+    {
+      icon: <Code2 className="h-6 w-6" />,
+      label: "GeeksforGeeks",
+      href: "https://www.geeksforgeeks.org/user/am03ul8l/",
+      username: "am03ul8l"
+    },
+    {
+      icon: <Trophy className="h-6 w-6" />,
+      label: "LeetCode",
+      href: "https://leetcode.com/u/am0346/",
+      username: "am0346"
+    },
+    {
+      icon: <GraduationCap className="h-6 w-6" />,
+      label: "IEEE Xplore",
+      href: "https://ieeexplore.ieee.org/author/273156730417953",
+      username: "Research Profile"
     }
   ];
 

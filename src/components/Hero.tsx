@@ -61,17 +61,26 @@ const Hero = () => {
 
           {/* Description */}
           <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto opacity-0 fade-in-up stagger-2">
-            Building scalable cloud-native applications with modern technologies. 
-            Passionate about AI, microservices, and creating exceptional user experiences.
+            Experienced in Android development, embedded systems, and cloud infrastructure. 
+            Passionate about AI-driven applications, open-source contributions, and building scalable solutions.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 opacity-0 fade-in-up stagger-3">
-            <Button size="lg" className="bg-primary hover:bg-primary/80 text-primary-foreground hover-glow">
+            <Button 
+              size="lg" 
+              className="bg-primary hover:bg-primary/80 text-primary-foreground hover-glow"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               <Mail className="mr-2 h-5 w-5" />
               Get In Touch
             </Button>
-            <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary/10">
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="border-primary text-primary hover:bg-primary/10"
+              onClick={() => window.open('https://drive.google.com/file/d/12Yv1FlWiDmpo-7OTeY-4ykXsgmEnqwAE/view?usp=drivesdk', '_blank')}
+            >
               <Download className="mr-2 h-5 w-5" />
               Download CV
             </Button>
@@ -80,21 +89,25 @@ const Hero = () => {
           {/* Social Links */}
           <div className="flex justify-center space-x-6 opacity-0 fade-in-up stagger-4">
             <a 
-              href="#" 
+              href="https://github.com/agniva1803" 
               className="text-muted-foreground hover:text-primary transition-colors duration-300 hover-glow"
               aria-label="GitHub"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Github className="h-6 w-6" />
             </a>
             <a 
-              href="#" 
+              href="https://www.linkedin.com/in/agniva-mukherjee-b2647b21a" 
               className="text-muted-foreground hover:text-primary transition-colors duration-300 hover-glow"
               aria-label="LinkedIn"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Linkedin className="h-6 w-6" />
             </a>
             <a 
-              href="#" 
+              href="mailto:agnivamukherjee8204@gmail.com" 
               className="text-muted-foreground hover:text-primary transition-colors duration-300 hover-glow"
               aria-label="Email"
             >
