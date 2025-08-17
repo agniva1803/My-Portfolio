@@ -39,26 +39,6 @@ const About = () => {
     }
   ];
 
-  const projectExperience = [
-    {
-      title: "Android Developer",
-      company: "PenguinOS Project",
-      period: "Nov 2023 - Present",
-      description: "Leading development of custom Android-based operating system with enhanced file management and system optimization."
-    },
-    {
-      title: "Full-Stack Developer",
-      company: "Freelance",
-      period: "Mar 2025 - May 2025", 
-      description: "Developed complete MERN stack food ordering application with payment integration and admin dashboard."
-    },
-    {
-      title: "Research Contributor",
-      company: "IEEE",
-      period: "Dec 2023 - Dec 2024",
-      description: "Published research on AI-driven healthcare chatbots, advancing intelligent diagnostic systems."
-    }
-  ];
 
   const honorsAndAwards = [
     {
@@ -204,34 +184,6 @@ const About = () => {
           </Card>
         </div>
 
-        {/* Project Experience Section */}
-        <div className="grid lg:grid-cols-1 gap-8 mb-16">
-          <Card className="glass-card hover-glow">
-            <CardHeader>
-              <CardTitle className="text-2xl font-bold flex items-center gap-3">
-                <Code2 className="h-6 w-6 text-primary" />
-                Project Experience
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              {projectExperience.map((exp, index) => (
-                <div key={index} className="border-l-2 border-primary/20 pl-6 relative">
-                  <div className="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-1"></div>
-                  <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2">
-                    <div>
-                      <h4 className="font-semibold text-lg">{exp.title}</h4>
-                      <p className="text-primary font-medium">{exp.company}</p>
-                      <p className="text-muted-foreground text-sm mt-2">{exp.description}</p>
-                    </div>
-                    <span className="text-sm text-muted-foreground bg-muted/50 px-3 py-1 rounded-full whitespace-nowrap">
-                      {exp.period}
-                    </span>
-                  </div>
-                </div>
-              ))}
-            </CardContent>
-          </Card>
-        </div>
 
         {/* Honors and Awards Section */}
         <div className="grid lg:grid-cols-1 gap-8 mb-16">
