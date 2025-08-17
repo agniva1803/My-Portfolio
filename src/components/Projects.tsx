@@ -113,8 +113,7 @@ const Projects = () => {
                       onClick={() => window.open(project.demo, '_blank')}
                     >
                       <ExternalLink className="mr-2 h-4 w-4" />
-                      {project.title.includes("PenguinOS") ? "Download" : 
-                       project.title.includes("Radiant") ? "Demo" : "Live Demo"}
+                      Download
                     </Button>
                   )}
                 </div>
