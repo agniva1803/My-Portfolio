@@ -61,6 +61,30 @@ const About = () => {
     }
   ];
 
+  const certifications = [
+    {
+      title: "Bitcoin Script Course Certificate",
+      organization: "BSV Academy",
+      date: "Aug 2024",
+      description: "Completed comprehensive Bitcoin scripting course covering blockchain fundamentals and smart contract development",
+      link: "https://drive.google.com/file/d/1mPNLD4Y87M5pEGYvnnq70Zlkn4NhUoIG/view?usp=sharing"
+    },
+    {
+      title: "Cloud Security Fundamentals",
+      organization: "Palo Alto Networks",
+      date: "Jun 2024",
+      description: "Certification in cloud security fundamentals covering security frameworks, threat detection, and cloud protection strategies",
+      link: "https://drive.google.com/file/d/1mo6ZFtvY1r43ruYZH2mN1bOFTEBanNbO/view"
+    },
+    {
+      title: "AWS Academy Cloud Architecting",
+      organization: "AWS Academy",
+      date: "Jan 2024",
+      description: "60-hour comprehensive course on AWS cloud architecture, infrastructure design, and best practices for scalable cloud solutions",
+      link: "https://www.credly.com/go/JniObEsa"
+    }
+  ];
+
   const researchPublications = [
     {
       title: "Integrating Intelligent Chatbots in Healthcare: AI Based Healthcare Chatbot",
@@ -184,6 +208,43 @@ const About = () => {
           </Card>
         </div>
 
+        {/* Certifications Section */}
+        <div className="grid lg:grid-cols-1 gap-8 mb-16">
+          <Card className="glass-card hover-glow">
+            <CardHeader>
+              <CardTitle className="text-2xl font-bold flex items-center gap-3">
+                <Award className="h-6 w-6 text-primary" />
+                Certifications
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              {certifications.map((cert, index) => (
+                <div key={index} className="border-l-2 border-primary/20 pl-6 relative">
+                  <div className="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-1"></div>
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2">
+                    <div>
+                      <h4 className="font-semibold text-lg">
+                        <a 
+                          href={cert.link} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-primary hover:underline"
+                        >
+                          {cert.title}
+                        </a>
+                      </h4>
+                      <p className="text-primary font-medium">{cert.organization}</p>
+                      <p className="text-muted-foreground text-sm mt-2">{cert.description}</p>
+                    </div>
+                    <span className="text-sm text-muted-foreground bg-muted/50 px-3 py-1 rounded-full whitespace-nowrap">
+                      {cert.date}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+        </div>
 
         {/* Honors and Awards Section */}
         <div className="grid lg:grid-cols-1 gap-8 mb-16">
